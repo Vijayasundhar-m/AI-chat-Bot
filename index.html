@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Chat Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>AI Chat Assistant</h1>
+    <label><input type="checkbox" id="auto"> Auto-save history</label>
+    <button id="download" type="button">Download chat</button>
+    <button id="clear" type="button">Clear</button>
+    <button id="keyBtn" type="button">API key</button>
+  </header>
+
+  <div id="log" aria-live="polite"></div>
+
+  <form id="form">
+    <button id="mic" type="button" aria-label="Voice input">🎤</button>
+    <textarea id="input" rows="1" placeholder="Type a message or tap the mic"></textarea>
+    <button id="send" type="submit">Send</button>
+  </form>
+</div>
+
+<dialog id="keyDialog">
+  <strong>Gemini API key</strong>
+  <p>Get a free key at aistudio.google.com/apikey. It is stored only in this browser.</p>
+  <input id="keyInput" type="password" placeholder="Paste your key" autocomplete="off">
+  <button id="keySave" type="button">Save key</button>
+  <button id="keyCancel" type="button">Cancel</button>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
